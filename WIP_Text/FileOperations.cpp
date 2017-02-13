@@ -23,15 +23,15 @@ void FileOperations::save(Player* player)
 
     child.setInventory(player->getInventory());
     */
-    int multiplier = 2^player->getLevel();
+    int multiplier = (2<<player->getLevel())+1;
 
     std::fstream outf;
     outf.open(name + ".dat", std::ios::out);
     if(outf.is_open())
     {
         outf << name << "\n";
-        outf << player->getMoney()/multiplier << "\n";
-        outf << player->getLevel()/multiplier << "\n";
+        outf << player->getMoney() << "\n";
+        outf << player->getLevel() << "\n";
         outf << child.getLevelExp()+player->getLevelExp()/multiplier << "\n";
         outf << child.getStrength()+player->getStrength()/multiplier << "\n";
         outf << child.getConstitution()+player->getConstitution()/multiplier << "\n";

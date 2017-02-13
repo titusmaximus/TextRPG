@@ -18,7 +18,7 @@ Inventory::~Inventory(void)
 
 void Inventory::printItems()
 {
-    for(int i = 0; i < m_slots.size(); i++)
+    for(int i = 0; i < (int)m_slots.size(); i++)
     {
         std::cout << "{" << i << "} " << m_slots[i]->getItemName() << std::endl;
     }

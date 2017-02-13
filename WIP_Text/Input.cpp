@@ -79,6 +79,8 @@ std::string Input::parseCommand(std::string command)
             std::cout << "\n    Use:                      Use an item located in your inventory";
             std::cout << "\n    Remove:                   Remove an item located in your inventory";
             std::cout << "\n    Equip:                    Equip an item from your inventory";
+			std::cout << "\n    Buy:                      See what the nearby shop has to offer";
+			std::cout << "\n    Sell:                     Sell some of your items at a nearby shop";
             std::cout << "\n    Battle:                   Jump into a battle";
             std::cout << "\n    Save:                     Pass your experience to the next generation";
             std::cout << "\n    Quit:                     Exit the game";
@@ -248,10 +250,9 @@ std::string Input::parseCommand(std::string command)
             Armor* chest   = static_cast<Armor*>(m_player->getEquipment(1));
             Armor* hand    = static_cast<Armor*>(m_player->getEquipment(2));
             Armor* legs    = static_cast<Armor*>(m_player->getEquipment(3));
+			Armor* feet    = static_cast<Armor*>(m_player->getEquipment(4));
             Weapon* weapon = static_cast<Weapon*>(m_player->getEquipment(5));
             Armor* shield  = static_cast<Armor*>(m_player->getEquipment(6));
-            Armor* feet  = static_cast<Armor*>(m_player->getEquipment(4));
-
             
 
             std::cout << "\n\n##################################\n";

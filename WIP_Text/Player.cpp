@@ -82,6 +82,7 @@ Item* Player::getEquipment(int slot)
     case(4): 
         if(m_feetarmor != nullptr)
             return m_feetarmor;
+		break;
     case(5): 
         if(m_weapon != nullptr)
             return m_weapon;

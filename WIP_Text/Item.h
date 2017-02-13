@@ -6,6 +6,7 @@
 class Item
 {
 public:
+	Item();
  	int getItemPrice(){return m_price;};
 	int getItemRarity(){return m_rarity;};
 	std::string getItemName(){return m_name;};
